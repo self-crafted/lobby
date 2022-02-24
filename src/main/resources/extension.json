@@ -1,11 +1,11 @@
 {
-  "entrypoint": "com.github.klainstom.${name.toLowerCase()}.ExtensionMain",
+  "entrypoint": "com.github.selfcrafted.${name.toLowerCase()}.ExtensionMain",
   "name": "${name}",
   "version": "${version}",
   "meta": {
     "github": {
       "release": {
-        "account": "KlainStom",
+        "account": "self-crafted",
         "repo": "lobby",
         "release": "v${version}"
       }
