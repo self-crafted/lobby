@@ -10,13 +10,16 @@
 [![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/self-crafted/lobby/latest?sort=semver&style=flat-square)](https://github.com/self-crafted/lobby/commits/master)
 [![GitHub release (latest by SemVer)](https://img.shields.io/github/downloads/self-crafted/lobby/latest/total?style=flat-square)](https://github.com/self-crafted/lobby/releases/latest)
 
-Lobby is a [Minestom](https://github.com/Minestom/Minestom) extension adding a spawn island to the server.
+Lobby is a [Minestom](https://github.com/Minestom/Minestom) extension adding lobby world to the server.
 
 Requires Java 17.<br>
 Works well with [Microstom](https://github.com/KlainStom/microstom).
 
 ### Features
-> todo features
+- Load lobby world from disk (Anvil format)
+- Use the anvil worlds world spawn, time and doDaylightCycle settings
+- Teleport players falling into the void to world spawn
 
 ### Future features
-> todo future features
+- Have a configurable maximum of players on one instance to create a new one
+- Add a server menu (as integration with an automatic network system)
