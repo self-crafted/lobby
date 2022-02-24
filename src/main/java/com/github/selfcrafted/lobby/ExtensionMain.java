@@ -14,13 +14,13 @@ public class ExtensionMain extends Extension {
     @Override
     public void preInitialize() {
          DATA_DIRECTORY = Objects.requireNonNull(MinecraftServer.getExtensionManager()
-                 .getExtension("$Name"), "Extension installed but not found!").getDataDirectory();
+                 .getExtension("&Name"), "Extension &Name installed but not found!").getDataDirectory();
 
         if (!DATA_DIRECTORY.toFile().exists()) {
             try {
                 Files.createDirectory(DATA_DIRECTORY);
             } catch (IOException e) {
-                MinecraftServer.LOGGER.error("Could not create terminus data directory", e);
+                MinecraftServer.LOGGER.error("Could not create &Name data directory", e);
                 e.printStackTrace();
             }
         }
