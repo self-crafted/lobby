@@ -21,11 +21,26 @@ import java.util.Objects;
 public class ExtensionMain extends Extension {
     public static Path DATA_DIRECTORY;
 
-    public static final Instance LOBBY_INSTANCE = MinecraftServer.getInstanceManager()
-            .createInstanceContainer(new AnvilLoader(ExtensionMain.DATA_DIRECTORY.resolve("anvil")));
-    public static final Pos LOBBY_SPAWN;
+    public static Instance LOBBY_INSTANCE;
+    public static Pos LOBBY_SPAWN;
 
-    static {
+    @Override
+    public void preInitialize() {
+         DATA_DIRECTORY = Objects.requireNonNull(MinecraftServer.getExtensionManager()
+                 .getExtension("&Name"), "Extension &Name installed but not found!").getDataDirectory();
+
+        if (!DATA_DIRECTORY.toFile().exists()) {
+            try {
+                Files.createDirectory(DATA_DIRECTORY);
+            } catch (IOException e) {
+                MinecraftServer.LOGGER.error("Could not create &Name data directory", e);
+                e.printStackTrace();
+            }
+        }
+
+        LOBBY_INSTANCE = MinecraftServer.getInstanceManager()
+                .createInstanceContainer(new AnvilLoader(ExtensionMain.DATA_DIRECTORY.resolve("anvil")));
+
         NBTCompound compound =
                 Objects.requireNonNull(LOBBY_INSTANCE.getTag(Tag.NBT)).getCompound("Data");
         if (compound != null) {
@@ -40,21 +55,6 @@ public class ExtensionMain extends Extension {
             } else LOBBY_INSTANCE.setTime(compound.getLong("Time"));
         } else {
             LOBBY_SPAWN = new Pos(0, 100, 0);
-        }
-    }
-
-    @Override
-    public void preInitialize() {
-         DATA_DIRECTORY = Objects.requireNonNull(MinecraftServer.getExtensionManager()
-                 .getExtension("&Name"), "Extension &Name installed but not found!").getDataDirectory();
-
-        if (!DATA_DIRECTORY.toFile().exists()) {
-            try {
-                Files.createDirectory(DATA_DIRECTORY);
-            } catch (IOException e) {
-                MinecraftServer.LOGGER.error("Could not create &Name data directory", e);
-                e.printStackTrace();
-            }
         }
     }
 
