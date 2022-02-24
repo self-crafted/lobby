@@ -10,8 +10,7 @@
 [![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/self-crafted/lobby/latest?sort=semver&style=flat-square)](https://github.com/self-crafted/lobby/commits/master)
 [![GitHub release (latest by SemVer)](https://img.shields.io/github/downloads/self-crafted/lobby/latest/total?style=flat-square)](https://github.com/self-crafted/lobby/releases/latest)
 
-Lobby is a [Minestom](https://github.com/Minestom/Minestom) extension [...] .
-> todo description
+Lobby is a [Minestom](https://github.com/Minestom/Minestom) extension adding a spawn island to the server.
 
 Requires Java 17.<br>
 Works well with [Microstom](https://github.com/KlainStom/microstom).
