@@ -4,7 +4,7 @@ plugins {
     java
 }
 
-var displayName = "EXTENSION_DISPLAY_NAME"
+var displayName = "Lobby"
 
 group = "com.github.selfcrafted"
 version = "1.0-SNAPSHOT"

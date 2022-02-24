@@ -1,4 +1,4 @@
-package com.github.selfcrafted;
+package com.github.selfcrafted.lobby;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

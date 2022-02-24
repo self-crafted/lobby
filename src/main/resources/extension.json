@@ -6,7 +6,7 @@
     "github": {
       "release": {
         "account": "KlainStom",
-        "repo": "EXTENSION_REPO_NAME",
+        "repo": "lobby",
         "release": "v${version}"
       }
     }

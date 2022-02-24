@@ -1,4 +1,4 @@
-package com.github.selfcrafted;
+package com.github.selfcrafted.lobby;
 
 import net.minestom.server.MinecraftServer;
 

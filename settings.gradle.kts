@@ -12,5 +12,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = "EXTENSION_REPO_NAME"
+rootProject.name = "lobby"
 
