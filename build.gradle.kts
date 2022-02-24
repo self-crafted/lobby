@@ -6,7 +6,7 @@ plugins {
 
 var displayName = "EXTENSION_DISPLAY_NAME"
 
-group = "com.github.klainstom"
+group = "com.github.selfcrafted"
 version = "1.0-SNAPSHOT"
 
 dependencies {
